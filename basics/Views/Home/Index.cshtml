@@ -1,0 +1,19 @@
+﻿@model List<Bootcamp>
+@section Header{
+@await Html.PartialAsync("_Header")
+}
+
+<div class="row">
+    @foreach(var bootcamp in Model){
+        @if(bootcamp.isHome && bootcamp.isActive){
+        <div class="card m-3" style="width: 18rem;">
+            <img src="~/img/@bootcamp.Image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@bootcamp.Title</h5>
+                <p class="card-text">@bootcamp.Description</p>
+                <a asp-controller="Bootcamp" asp-action="Details" asp-route-id="@bootcamp.Id" class="btn btn-primary">Detay</a>
+            </div>
+            </div>
+        }
+    }
+</div>
