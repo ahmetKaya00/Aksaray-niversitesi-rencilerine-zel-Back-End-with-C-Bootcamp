@@ -23,15 +23,17 @@
             </div>
         </form>
    @foreach(var prd in Model.Products){
-    <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mt-3">
-    <div class="card" style="width: 18rem;">
-  <img src="~/img/@prd.Image" class="card-img-top img-fluid" style="max-height: 200px; object-fit: contain" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">@prd.Name</h5>
-    <p class="card-text">@prd.Price</p>
-    <a href="#" class="btn btn-primary">Detay</a>
-  </div>
-</div>
-</div>
+    @if(@prd.IsActive){
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-3 mt-3">
+            <div class="card" style="width: 18rem;">
+        <img src="~/img/@prd.Image" class="card-img-top img-fluid" style="max-height: 200px; object-fit: contain" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@prd.Name</h5>
+            <p class="card-text">@prd.Price</p>
+            <a href="#" class="btn btn-primary">Detay</a>
+        </div>
+        </div>
+        </div>
+        }
    }
    </div>

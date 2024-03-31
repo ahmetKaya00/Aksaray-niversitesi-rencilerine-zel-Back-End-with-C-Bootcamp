@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QTpszEPdkyiWmlRfk4Vsl8ujcvCW+jYskipwFGHB0fM=",
+  "Hash": "sW5VY6CdGkLzzzFE0v3PIWXtwCduxBpf2lVLwkK9WSc=",
   "Source": "ETicaret",
   "BasePath": "_content/ETicaret",
   "Mode": "Default",
@@ -131,6 +131,25 @@
       "OriginalItemSpec": "wwwroot\\img\\2.jpg"
     },
     {
+      "Identity": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\\ETicaret\\wwwroot\\img\\292e1eb2-f7ce-4ccd-9b52-616f395d0048.jpg",
+      "SourceId": "ETicaret",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\\ETicaret\\wwwroot\\",
+      "BasePath": "_content/ETicaret",
+      "RelativePath": "img/292e1eb2-f7ce-4ccd-9b52-616f395d0048.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\292e1eb2-f7ce-4ccd-9b52-616f395d0048.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\\ETicaret\\wwwroot\\img\\3.jpg",
       "SourceId": "ETicaret",
       "SourceType": "Discovered",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\\ETicaret\\wwwroot\\img\\8e72b2f3-6f43-45fb-9db7-f4da8da74731.jpg",
+      "SourceId": "ETicaret",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\\ETicaret\\wwwroot\\",
+      "BasePath": "_content/ETicaret",
+      "RelativePath": "img/8e72b2f3-6f43-45fb-9db7-f4da8da74731.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\8e72b2f3-6f43-45fb-9db7-f4da8da74731.jpg"
     },
     {
       "Identity": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\\ETicaret\\wwwroot\\js\\site.js",
