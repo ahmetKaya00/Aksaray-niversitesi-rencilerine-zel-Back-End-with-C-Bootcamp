@@ -18,6 +18,46 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp\EfCoreApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/BootcampKayit/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBLYXlpdFxjcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/BootcampKayit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBLYXlpdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Bootcamp/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Bootcamp/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Bootcamp/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Bootcamp/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcaW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Egitmen/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdpdG1lblxjcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Egitmen/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdpdG1lblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Egitmen/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdpdG1lblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Egitmen/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWdpdG1lblxpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Ogrenci/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxjcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Ogrenci/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Aksaray-niversitesi-rencilerine-zel-Back-End-with-C-Bootcamp/EfCoreApp/Views/Ogrenci/Edit.cshtml]

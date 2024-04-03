@@ -4,26 +4,26 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EfCoreApp.Controllers
 {
-    public class OgrenciController : Controller{
+    public class EgitmenController : Controller{
 
         private readonly DataContext _context;
 
-        public OgrenciController(DataContext context){
+        public EgitmenController(DataContext context){
             _context = context;
         }
 
         public async Task<IActionResult> Index(){
-            return View(await _context.Ogrenciler.ToListAsync());
+            return View(await _context.Egitmenler.ToListAsync());
         }
         public IActionResult Create(){
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Ogrenci model){
+        public async Task<IActionResult> Create(Egitmen model){
 
-            _context.Ogrenciler.Add(model);
+            _context.Egitmenler.Add(model);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index","Ogrenci");
+            return RedirectToAction("Index","Egitmen");
         }
 
         [HttpGet]
@@ -31,7 +31,7 @@ namespace EfCoreApp.Controllers
             if(id == null){
                 return NotFound();
             }
-            var ogr = await _context.Ogrenciler.Include(o=>o.BootcampKayit).ThenInclude(x=>x.Bootcamp).FirstOrDefaultAsync(o=>o.OgrenciId == id);
+            var ogr = await _context.Egitmenler.FirstOrDefaultAsync(o=>o.EgitmenId == id);
             if(ogr == null){
                 return NotFound();
             }
@@ -40,8 +40,8 @@ namespace EfCoreApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult>Edit(int id, Ogrenci model){
-            if(id != model.OgrenciId){
+        public async Task<IActionResult>Edit(int id, Egitmen model){
+            if(id != model.EgitmenId){
                 return NotFound();
             }
 
@@ -53,7 +53,7 @@ namespace EfCoreApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if(!_context.Ogrenciler.Any(o=>o.OgrenciId == model.OgrenciId)){
+                    if(!_context.Egitmenler.Any(o=>o.EgitmenId == model.EgitmenId)){
                         return NotFound();
                     }else{
                         throw;
@@ -69,21 +69,21 @@ namespace EfCoreApp.Controllers
                 if(id == null){
                     return NotFound();
                 }
-                var ogrenci = await _context.Ogrenciler.FindAsync(id);
+                var Egitmen = await _context.Egitmenler.FindAsync(id);
 
-                if(ogrenci == null){
+                if(Egitmen == null){
                     return NotFound();
                 }
-                return View(ogrenci);
+                return View(Egitmen);
             }
 
             [HttpPost]
             public async Task<IActionResult>Delete([FromForm]int id){
-                var ogrenci = await _context.Ogrenciler.FindAsync(id);
-                if(ogrenci == null){
+                var Egitmen = await _context.Egitmenler.FindAsync(id);
+                if(Egitmen == null){
                     return NotFound();
                 }
-                _context.Ogrenciler.Remove(ogrenci);
+                _context.Egitmenler.Remove(Egitmen);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

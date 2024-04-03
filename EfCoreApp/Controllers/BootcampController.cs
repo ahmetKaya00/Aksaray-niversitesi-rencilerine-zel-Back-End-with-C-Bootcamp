@@ -1,47 +1,54 @@
 using EfCoreApp.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace EfCoreApp.Controllers
 {
-    public class OgrenciController : Controller{
-
+    public class BootcampController : Controller{
         private readonly DataContext _context;
 
-        public OgrenciController(DataContext context){
+        public BootcampController(DataContext context){
             _context = context;
         }
 
         public async Task<IActionResult> Index(){
-            return View(await _context.Ogrenciler.ToListAsync());
+            return View(await _context.Bootcamps.Include(x=>x.Egitmen).ToListAsync());
         }
-        public IActionResult Create(){
+
+        public async Task<IActionResult> Create(){
+            ViewBag.Egitmenler = new SelectList(await _context.Egitmenler.ToListAsync(),"EgitmenId","AdSoyad");
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Ogrenci model){
+        public async Task<IActionResult> Create(Bootcamp model){
 
-            _context.Ogrenciler.Add(model);
+            _context.Bootcamps.Add(model);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index","Ogrenci");
+            return RedirectToAction("Index");
         }
 
-        [HttpGet]
+         [HttpGet]
         public async Task<IActionResult>Edit(int? id){
             if(id == null){
                 return NotFound();
             }
-            var ogr = await _context.Ogrenciler.Include(o=>o.BootcampKayit).ThenInclude(x=>x.Bootcamp).FirstOrDefaultAsync(o=>o.OgrenciId == id);
-            if(ogr == null){
+            var bootcamp = 
+            await _context.Bootcamps
+                            .Include(o=>o.BootcampKayit)
+                            .ThenInclude(x=>x.Ogrenci)
+                            .FirstOrDefaultAsync(b=>b.BootcampId == id);
+            if(bootcamp == null){
                 return NotFound();
             }
-            return View(ogr);
+            ViewBag.Egitmenler = new SelectList(await _context.Egitmenler.ToListAsync(),"EgitmenId","AdSoyad");
+            return View(bootcamp);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult>Edit(int id, Ogrenci model){
-            if(id != model.OgrenciId){
+        public async Task<IActionResult>Edit(int id, Bootcamp model){
+            if(id != model.BootcampId){
                 return NotFound();
             }
 
@@ -53,7 +60,7 @@ namespace EfCoreApp.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if(!_context.Ogrenciler.Any(o=>o.OgrenciId == model.OgrenciId)){
+                    if(!_context.Bootcamps.Any(o=>o.BootcampId == model.BootcampId)){
                         return NotFound();
                     }else{
                         throw;
@@ -61,6 +68,7 @@ namespace EfCoreApp.Controllers
                 }
                 return RedirectToAction("Index");
             }
+            ViewBag.Egitmenler = new SelectList(await _context.Egitmenler.ToListAsync(),"EgitmenId","AdSoyad");
             return View(model);
         }
 
@@ -69,21 +77,21 @@ namespace EfCoreApp.Controllers
                 if(id == null){
                     return NotFound();
                 }
-                var ogrenci = await _context.Ogrenciler.FindAsync(id);
+                var bootcamp = await _context.Bootcamps.FindAsync(id);
 
-                if(ogrenci == null){
+                if(bootcamp == null){
                     return NotFound();
                 }
-                return View(ogrenci);
+                return View(bootcamp);
             }
 
             [HttpPost]
             public async Task<IActionResult>Delete([FromForm]int id){
-                var ogrenci = await _context.Ogrenciler.FindAsync(id);
-                if(ogrenci == null){
+                var bootcamp = await _context.Bootcamps.FindAsync(id);
+                if(bootcamp == null){
                     return NotFound();
                 }
-                _context.Ogrenciler.Remove(ogrenci);
+                _context.Bootcamps.Remove(bootcamp);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

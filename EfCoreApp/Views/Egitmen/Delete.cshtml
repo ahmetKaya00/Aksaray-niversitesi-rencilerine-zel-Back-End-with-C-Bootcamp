@@ -1,0 +1,10 @@
+@model Egitmen
+
+<p>
+    <b>@Model.AdSoyad</b> isimli egitmeni silmek istiyor musun ?
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.EgitmenId">
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a asp-action="Index" class="btn btn-success">Hayır</a>
+    </form>
+</p>
