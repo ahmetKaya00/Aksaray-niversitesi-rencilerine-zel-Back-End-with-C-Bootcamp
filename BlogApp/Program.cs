@@ -10,10 +10,25 @@ builder.Services.AddDbContext<BlogContext>(options =>{
 });
 builder.Services.AddScoped<IPostRepository, EfPostRepository>();
 builder.Services.AddScoped<ITagRepository, EfTagRepository>();
+builder.Services.AddScoped<ICommentRepository, EfCommentRepository>();
 var app = builder.Build();
 app.UseStaticFiles();
 SeedData.TestVerileriniDoldur(app);
 
-app.MapDefaultControllerRoute();
+app.MapControllerRoute(
+    name: "posts/details",
+    pattern: "posts/details/{url}",
+    defaults: new {controller = "Posts", action = "Details" }
+);
+app.MapControllerRoute(
+    name: "posts_by_tag",
+    pattern: "posts/tag/{tag}",
+    defaults: new {controller = "Posts", action = "Index" }
+);
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();
