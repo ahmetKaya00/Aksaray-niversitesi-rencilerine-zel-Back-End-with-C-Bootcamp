@@ -34,6 +34,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     context.Posts.AddRange(
                         new Post{
                             Title = "Asp.net core",
+                            Description = "asp.net core bootcampi",
                             Content = "asp.net core bootcampi",
                             Url = "asp-net-core",
                             IsActive = true,
@@ -48,6 +49,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                         new Post{
                             Title = "Game Bootcamp",
+                            Description = "unity game bootcampi",
                             Content = "unity game bootcampi",
                             Url = "game-bootcamp",
                             IsActive = true,
@@ -58,6 +60,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                         new Post{
                             Title = "Web geliştirme",
+                            Description = "web geliştirme adımları",
                             Content = "web geliştirme adımları",
                             Url = "web-gelistirme",
                             IsActive = true,
